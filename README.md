@@ -1,7 +1,7 @@
 # RAG LLM по заметкам
 
 Как это работает:
-1. В папке `notes/` находятся заметки в формате Markdown/TXT.
+1. В папке `notes/` находятся нагенеренные ради примера заметки в формате Markdown/TXT.
 2. Заметки индексируются в Chroma векторное хранилище.
 3. При запросе к LLM, запрос обрабатывается и отправляется в OpenRouter.
 4. OpenRouter обрабатывает запрос и возвращает ответ.
@@ -54,6 +54,12 @@ https://openrouter.ai/xiaomi/mimo-v2-flash:free/api
 
 ## Примеры
 
+
 В этом репозитории уже есть нагенеренные заметки в папке `notes/`. Ниже пару примеров работы бота на основе них:
+гит
 
+<img width="545" height="571" alt="Снимок экрана 2026-01-22 в 21 39 33" src="https://github.com/user-attachments/assets/db4833de-497b-463c-a799-f4454ad7256d" />
 
+<img width="537" height="696" alt="Снимок экрана 2026-01-22 в 21 43 15" src="https://github.com/user-attachments/assets/eb0a42d3-c5a7-49b2-aa2f-81d8ff06d514" />
+
+<img width="570" height="579" alt="Снимок экрана 2026-01-22 в 21 32 43" src="https://github.com/user-attachments/assets/b6c9ff53-22dc-4aab-9534-1e3eb7fc8960" />
