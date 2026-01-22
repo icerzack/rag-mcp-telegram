@@ -1,0 +1,49 @@
+HTTP quick reminders
+
+## HTTP Methods
+- GET: safe and idempotent (in theory); should not modify server state.
+- POST: not necessarily idempotent; used for creating resources or non-idempotent operations.
+- PUT: idempotent; used for creating or replacing a resource at a specific URI.
+- PATCH: partial update; not necessarily idempotent.
+- DELETE: idempotent; removes a resource.
+
+## Common status codes
+- 200 OK: request succeeded
+- 201 Created: resource created successfully
+- 204 No Content: success but no content to return
+- 400 Bad Request: client input error (malformed request)
+- 401 Unauthorized: missing or invalid authentication credentials
+- 403 Forbidden: authenticated but not authorized for this action
+- 404 Not Found: resource does not exist
+- 409 Conflict: resource conflict (e.g., duplicate creation)
+- 422 Unprocessable Entity: valid syntax but semantic errors
+- 429 Too Many Requests: rate limited
+- 500 Internal Server Error: server-side error
+- 502 Bad Gateway: upstream server error
+- 503 Service Unavailable: service temporarily unavailable
+
+## Headers
+- Content-Type: MIME type of the body (e.g., application/json, text/plain)
+- Authorization: credentials (Bearer token, Basic auth, etc.)
+- Accept: what response format client accepts
+- User-Agent: client identifier
+- X-Request-ID: request tracing/correlation ID
+- Cache-Control: caching directives (no-cache, max-age, etc.)
+
+## Best practices
+- Timeouts matter when calling external APIs; always set a request timeout.
+- Use idempotency keys for POST requests that should be safe to retry.
+- Return appropriate status codes; don't use 200 for errors.
+- Include error details in response body (not just status code).
+- Use proper HTTP methods; don't use GET for state-changing operations.
+- Version your API (URL path or header).
+- Support pagination for list endpoints.
+- Use HTTPS in production; never send credentials over HTTP.
+
+## REST conventions
+- Use nouns for resources, not verbs: `/users` not `/getUsers`.
+- Use plural nouns: `/users/123` not `/user/123`.
+- Use HTTP methods to indicate actions: GET (read), POST (create), PUT (replace), PATCH (update), DELETE (remove).
+- Return proper status codes and consistent error format.
+- Use query parameters for filtering, sorting, pagination: `/users?page=1&limit=10`.
+
