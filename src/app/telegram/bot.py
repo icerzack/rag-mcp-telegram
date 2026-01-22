@@ -31,7 +31,7 @@ async def _cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
         return
     await _reply_html(
         update,
-        "Hi! Send me a question and I will answer using local notes.\n\nCommands:\n/start\n/reindex"
+        "Привет! Отправь мне вопрос, и я отвечу используя твои локальные заметки.\n\nКоманды:\n/start\n/reindex"
     )
 
 
@@ -47,7 +47,7 @@ async def _cmd_reindex(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         res = await client.reindex()
         await _reply_html(
             update,
-            f"Reindexed.\nFiles: {res.indexed_files}\nChunks: {res.indexed_chunks}"
+            f"Заметки успешно индексированы.\nФайлов: {res.indexed_files}\nЧанков: {res.indexed_chunks}"
         )
     except Exception:
         logger.exception("reindex failed")
