@@ -54,9 +54,7 @@ https://openrouter.ai/xiaomi/mimo-v2-flash:free/api
 
 ## Примеры
 
-
 В этом репозитории уже есть нагенеренные заметки в папке `notes/`. Ниже пару примеров работы бота на основе них:
-гит
 
 <img width="545" height="571" alt="Снимок экрана 2026-01-22 в 21 39 33" src="https://github.com/user-attachments/assets/db4833de-497b-463c-a799-f4454ad7256d" />
 
